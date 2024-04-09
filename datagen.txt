@@ -1,0 +1,509 @@
+create table Property(
+  property_id varchar(7) not null,
+  name varchar(255),
+  address varchar(255),
+  apt_available numeric(5),
+  apt_total numeric(5),
+  primary key (property_id)
+);
+
+insert into Property (property_id, name, address, apt_available, apt_total) values (1, 'Simonis Group', '9882 Upham Avenue', 60, 227);
+insert into Property (property_id, name, address, apt_available, apt_total) values (2, 'Borer-Klein', '63 Del Mar Avenue', 23, 104);
+insert into Property (property_id, name, address, apt_available, apt_total) values (3, 'Kshlerin Group', '9781 Clemons Pass', 27, 134);
+insert into Property (property_id, name, address, apt_available, apt_total) values (4, 'Stracke Inc', '0 Basil Center', 25, 128);
+insert into Property (property_id, name, address, apt_available, apt_total) values (5, 'Yundt Group', '4554 Lakeland Circle', 9, 290);
+insert into Property (property_id, name, address, apt_available, apt_total) values (6, 'Tremblay LLC', '801 Lakeland Center', 36, 285);
+insert into Property (property_id, name, address, apt_available, apt_total) values (7, 'Weber, O''Reilly and Carroll', '1292 5th Crossing', 31, 190);
+insert into Property (property_id, name, address, apt_available, apt_total) values (8, 'Gorczany, Kreiger and Herzog', '383 Menomonie Street', 63, 257);
+insert into Property (property_id, name, address, apt_available, apt_total) values (9, 'Schuppe-Dietrich', '88395 Mendota Crossing', 34, 254);
+insert into Property (property_id, name, address, apt_available, apt_total) values (10, 'Schiller, Glover and Baumbach', '09 Memorial Alley', 99, 127);
+insert into Property (property_id, name, address, apt_available, apt_total) values (11, 'Carter, McClure and Daniel', '61907 Bluejay Road', 40, 286);
+insert into Property (property_id, name, address, apt_available, apt_total) values (12, 'Zemlak Inc', '64603 Laurel Street', 6, 256);
+insert into Property (property_id, name, address, apt_available, apt_total) values (13, 'Kuvalis Inc', '63044 Reinke Park', 39, 211);
+insert into Property (property_id, name, address, apt_available, apt_total) values (14, 'Stroman, Johnson and Howell', '5529 Sullivan Street', 88, 138);
+insert into Property (property_id, name, address, apt_available, apt_total) values (15, 'Kreiger Inc', '25 Bowman Terrace', 7, 138);
+insert into Property (property_id, name, address, apt_available, apt_total) values (16, 'Sipes-Reilly', '97214 Killdeer Parkway', 44, 225);
+insert into Property (property_id, name, address, apt_available, apt_total) values (17, 'Sauer Inc', '084 Loeprich Drive', 86, 209);
+insert into Property (property_id, name, address, apt_available, apt_total) values (18, 'Gerlach-Crona', '45 Pennsylvania Hill', 65, 102);
+insert into Property (property_id, name, address, apt_available, apt_total) values (19, 'Schoen LLC', '4 Bunker Hill Plaza', 17, 241);
+insert into Property (property_id, name, address, apt_available, apt_total) values (20, 'Deckow-Mohr', '74 Armistice Court', 66, 276);
+insert into Property (property_id, name, address, apt_available, apt_total) values (21, 'Koepp-Stark', '7 Northview Road', 23, 141);
+insert into Property (property_id, name, address, apt_available, apt_total) values (22, 'Rippin-Glover', '29654 Karstens Junction', 41, 178);
+insert into Property (property_id, name, address, apt_available, apt_total) values (23, 'Kemmer, Ferry and Greenholt', '8 Spaight Avenue', 38, 191);
+insert into Property (property_id, name, address, apt_available, apt_total) values (24, 'Schiller-Schiller', '46301 Chive Road', 30, 200);
+insert into Property (property_id, name, address, apt_available, apt_total) values (25, 'Satterfield, Miller and Weimann', '62616 Jenna Crossing', 65, 270);
+insert into Property (property_id, name, address, apt_available, apt_total) values (26, 'Zieme-Morissette', '568 Pankratz Junction', 29, 191);
+insert into Property (property_id, name, address, apt_available, apt_total) values (27, 'Macejkovic Group', '56221 North Street', 88, 293);
+insert into Property (property_id, name, address, apt_available, apt_total) values (28, 'Bogan Group', '3595 Green Ridge Circle', 75, 151);
+insert into Property (property_id, name, address, apt_available, apt_total) values (29, 'Wiegand LLC', '928 Eastwood Drive', 31, 227);
+insert into Property (property_id, name, address, apt_available, apt_total) values (30, 'Green, Simonis and Kulas', '07702 Lyons Avenue', 99, 105);
+
+select * from Property;
+
+Create table Amenity(
+amenity_id numeric(20) not null,
+amenity_description varchar(100),
+fee numeric(20),
+primary key (amenity_id)
+);
+insert into Amenity (amenity_id, amenity_description, fee) values (1, 'Yoga studio', 101);
+insert into Amenity (amenity_id, amenity_description, fee) values (2, 'Package receiving', 112);
+insert into Amenity (amenity_id, amenity_description, fee) values (3, 'Garden', 129);
+insert into Amenity (amenity_id, amenity_description, fee) values (4, 'Spa', 42);
+insert into Amenity (amenity_id, amenity_description, fee) values (5, 'Bike storage', 32);
+insert into Amenity (amenity_id, amenity_description, fee) values (6, 'Conference room', 70);
+insert into Amenity (amenity_id, amenity_description, fee) values (7, 'Basketball court', 109);
+insert into Amenity (amenity_id, amenity_description, fee) values (8, 'Sauna', 131);
+insert into Amenity (amenity_id, amenity_description, fee) values (9, 'Spa', 140);
+insert into Amenity (amenity_id, amenity_description, fee) values (10, 'Business center', 86);
+insert into Amenity (amenity_id, amenity_description, fee) values (11, 'Sauna', 119);
+insert into Amenity (amenity_id, amenity_description, fee) values (12, 'Outdoor fireplace', 74);
+insert into Amenity (amenity_id, amenity_description, fee) values (13, 'On-site maintenance', 42);
+insert into Amenity (amenity_id, amenity_description, fee) values (14, 'Fitness center', 71);
+insert into Amenity (amenity_id, amenity_description, fee) values (15, 'Sauna', 65);
+insert into Amenity (amenity_id, amenity_description, fee) values (16, 'Dog park', 111);
+insert into Amenity (amenity_id, amenity_description, fee) values (17, 'Business center', 72);
+insert into Amenity (amenity_id, amenity_description, fee) values (18, 'Electric vehicle charging', 41);
+insert into Amenity (amenity_id, amenity_description, fee) values (19, 'Roof deck', 45);
+insert into Amenity (amenity_id, amenity_description, fee) values (20, 'Movie theater', 51);
+insert into Amenity (amenity_id, amenity_description, fee) values (21, 'Dog park', 102);
+insert into Amenity (amenity_id, amenity_description, fee) values (22, 'Garden', 89);
+insert into Amenity (amenity_id, amenity_description, fee) values (23, 'Pet-friendly', 150);
+insert into Amenity (amenity_id, amenity_description, fee) values (24, '24-hour concierge', 116);
+insert into Amenity (amenity_id, amenity_description, fee) values (25, 'Valet parking', 118);
+insert into Amenity (amenity_id, amenity_description, fee) values (26, 'Playground', 54);
+insert into Amenity (amenity_id, amenity_description, fee) values (27, 'Yoga studio', 59);
+insert into Amenity (amenity_id, amenity_description, fee) values (28, 'Yoga studio', 110);
+insert into Amenity (amenity_id, amenity_description, fee) values (29, 'On-site maintenance', 56);
+insert into Amenity (amenity_id, amenity_description, fee) values (30, 'Yoga studio', 138);
+
+Select * from Amenity;
+
+Create table Apartment(
+apartment_number numeric(5) not null,
+security_dep numeric(5),
+rent numeric(8),
+bedrooms numeric(5),
+bathrooms numeric(5),
+property_id varchar(7) not null,
+amenity_id numeric(20),
+primary key (apartment_number, property_id),
+foreign key (amenity_id) references Amenity(amenity_id),
+foreign key (property_id) references Property(property_id)
+);
+
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (247, 1372, 3654, 3, 1, 8, 1);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (706, 2438, 1456, 5, 1, 30, 6);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (704, 2113, 1205, 4, 4, 5, 15);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (412, 833, 4924, 3, 1, 25, 3);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (144, 1707, 2199, 3, 5, 22, 5);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (33, 1376, 1194, 4, 4, 7, 10);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (211, 1772, 1087, 0, 1, 1, 22);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (833, 1000, 4833, 2, 1, 5, 12);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (790, 1073, 4673, 3, 4, 14, 16);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (427, 2291, 1018, 6, 2, 16, 18);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (360, 1012, 2679, 0, 4, 20, 27);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (230, 2285, 3533, 5, 1, 26, 12);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (2, 2254, 4270, 4, 1, 11, 2);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (958, 2969, 3011, 5, 5, 1, 14);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (281, 1162, 1321, 1, 2, 22, 5);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (811, 2432, 2356, 2, 1, 11, 21);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (418, 2800, 2052, 3, 1, 9, 16);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (983, 654, 2325, 4, 4, 16, 10);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (792, 2018, 2004, 6, 3, 24, 27);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (120, 687, 4086, 4, 5, 25, 9);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (517, 1230, 4436, 5, 1, 9, 15);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (739, 938, 4538, 2, 5, 2, 24);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (323, 2801, 1934, 1, 3, 13, 15);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (886, 1913, 2501, 5, 5, 4, 25);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (766, 2514, 2698, 3, 5, 4, 29);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (450, 2184, 4267, 1, 2, 8, 7);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (530, 2348, 1985, 6, 2, 14, 22);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (213, 1642, 2667, 1, 4, 3, 12);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (299, 1185, 4563, 0, 1, 16, 4);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (973, 2497, 1385, 1, 3, 28, 26);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (413, 2300, 2070, 2, 2, 25, 20);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (669, 938, 3567, 0, 1, 23, 21);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (727, 2189, 1397, 5, 2, 14, 12);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (812, 2877, 2869, 1, 5, 6, 30);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (488, 1249, 2264, 6, 4, 14, 6);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (202, 1837, 1387, 5, 3, 21, 19);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (867, 1970, 2855, 2, 2, 13, 16);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (583, 1849, 4681, 6, 4, 4, 24);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (298, 2505, 3150, 3, 5, 10, 2);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (633, 1812, 1506, 4, 5, 30, 3);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (168, 2614, 1924, 1, 4, 18, 12);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (611, 1482, 2221, 0, 1, 6, 9);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (542, 2330, 4089, 2, 5, 24, 7);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (413, 2781, 2390, 1, 4, 5, 8);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (806, 1962, 4730, 2, 2, 1, 21);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (544, 2718, 1613, 3, 1, 26, 29);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (329, 879, 3600, 0, 5, 27, 28);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (336, 2696, 1198, 6, 3, 28, 5);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (46, 1274, 4279, 3, 4, 26, 13);
+insert into Apartment (apartment_number, security_dep, rent, bedrooms, bathrooms, property_id, amenity_id) values (621, 1733, 4035, 1, 3, 5, 6);
+
+
+Select * from Apartment;
+
+Create table Person(
+p_id numeric(15) not null,
+name varchar(255),
+phone_num varchar(15),
+email varchar(255),
+credit_score numeric(3),
+salary numeric(13),
+visited numeric(1),
+satisfied numeric(1),
+lease_type varchar(100),
+prospective_status numeric(1),
+primary key (p_id)
+);
+
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (81224, 'Elias Alywin', '820-285-4688', 'ealywin0@comcast.net', 536, 10104917, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (97347, 'Mead Waby', '582-236-4321', 'mwaby1@jigsy.com', 397, 11152068, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (43404, 'Cynthea Jime', '520-356-0682', 'cjime2@reuters.com', 702, 5766248, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (419, 'Clari Klambt', '820-450-3402', 'cklambt3@sitemeter.com', 786, 15731437, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (80888, 'Morris Lande', '355-405-3652', 'mlande4@shop-pro.jp', 606, 3648415, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (50759, 'Helen Klimkiewich', '728-547-6060', 'hklimkiewich5@newsvine.com', 373, 13357944, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (37324, 'Amie Blackborough', '100-312-5032', 'ablackborough6@adobe.com', 482, 2863513, 1, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (62182, 'Phoebe Prevost', '315-773-7581', 'pprevost7@webnode.com', 325, 10411910, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (7627, 'Penelope Vauls', '929-913-7415', 'pvauls8@histats.com', 699, 2634787, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (36235, 'Samuel Burrage', '697-350-7788', 'sburrage9@w3.org', 348, 18315293, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (52503, 'Currie Murcott', '168-178-4280', 'cmurcotta@vk.com', 778, 7706737, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (27253, 'Abigale Le Noir', '298-312-1850', 'aleb@clickbank.net', 641, 17671499, 0, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (82266, 'Dania Giovannilli', '205-625-7512', 'dgiovannillic@lulu.com', 701, 2536974, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (1589, 'Davy Jewer', '662-564-2906', 'djewerd@guardian.co.uk', 327, 10956449, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (35078, 'Umberto Softley', '223-181-2887', 'usoftleye@ebay.co.uk', 482, 5996336, 0, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (12807, 'Wendel O''Haire', '271-671-9173', 'wohairef@ucsd.edu', 349, 19395492, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (13759, 'Leslie Baudins', '891-373-7774', 'lbaudinsg@creativecommons.org', 422, 18075877, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (11480, 'Obadiah Delatour', '540-341-2644', 'odelatourh@dedecms.com', 564, 18913527, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (51425, 'Aubry Godber', '771-904-7456', 'agodberi@icio.us', 380, 18861197, 0, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (75141, 'Jacques Snowding', '267-231-5517', 'jsnowdingj@squarespace.com', 467, 16633128, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (63980, 'Romeo Zarfati', '836-301-2831', 'rzarfatik@ucla.edu', 725, 8675839, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (79445, 'Giustino Duff', '510-714-2367', 'gduffl@google.co.jp', 739, 13518263, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (65255, 'Tadeas Blakesley', '821-225-7086', 'tblakesleym@netscape.com', 584, 18920618, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (48301, 'Margo Phippen', '915-806-9915', 'mphippenn@wp.com', 776, 9129387, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (94934, 'Eldredge Sreenan', '919-345-0861', 'esreenano@etsy.com', 385, 351778, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (48576, 'Brandie Brechin', '588-756-9856', 'bbrechinp@dot.gov', 654, 1091959, 0, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (3037, 'Charleen Catenot', '874-716-8089', 'ccatenotq@usnews.com', 550, 12495738, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (98284, 'Hillary Ducker', '958-493-5173', 'hduckerr@4shared.com', 480, 3403850, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (79770, 'Zulema Pilgrim', '539-271-0503', 'zpilgrims@jugem.jp', 615, 7637894, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (31504, 'Mark Eicke', '394-180-5579', 'meicket@is.gd', 700, 15178487, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (13763, 'Daffi Winstanley', '229-609-1442', 'dwinstanleyu@tiny.cc', 584, 19041836, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (37387, 'Tris McIlrath', '327-495-7645', 'tmcilrathv@globo.com', 311, 2421627, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (40382, 'Shaina McShee', '801-705-4634', 'smcsheew@bloomberg.com', 790, 11361176, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (60448, 'Marijo Symones', '836-836-1583', 'msymonesx@blogger.com', 535, 11764029, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (75884, 'De witt Sooper', '971-784-6090', 'dwitty@freewebs.com', 714, 10074938, 0, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (73024, 'Bernice Culcheth', '722-653-7490', 'bculchethz@taobao.com', 654, 14041460, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (43136, 'Dyann Besque', '368-208-4587', 'dbesque10@icio.us', 693, 7182047, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (53884, 'Ezekiel Trebilcock', '978-168-7259', 'etrebilcock11@wix.com', 441, 9004808, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (79078, 'Dimitri Eager', '389-272-2820', 'deager12@eepurl.com', 676, 7792112, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (62349, 'Algernon Rabidge', '630-945-3244', 'arabidge13@merriam-webster.com', 409, 11513375, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (9674, 'Annmarie Killcross', '990-495-0050', 'akillcross14@mozilla.com', 557, 704320, 1, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (3149, 'Brent De Avenell', '194-944-1755', 'bde15@canalblog.com', 752, 6897412, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (2560, 'Warde Boaler', '378-965-6990', 'wboaler16@mysql.com', 367, 10653128, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (61831, 'Rhonda Perulli', '758-555-6458', 'rperulli17@nationalgeographic.com', 443, 19152243, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (85606, 'Oona Nanelli', '865-462-3237', 'onanelli18@google.com.hk', 317, 13909253, 0, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (29060, 'Guilbert Tarbard', '499-426-3943', 'gtarbard19@chron.com', 581, 5640097, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (66342, 'Tab Bidewel', '347-408-1818', 'tbidewel1a@cnn.com', 723, 4737346, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (49266, 'Christoforo Presdie', '215-334-2390', 'cpresdie1b@google.co.uk', 525, 4218978, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (9847, 'Thornie Potten', '560-594-9845', 'tpotten1c@amazonaws.com', 449, 3670148, 0, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (4076, 'Keefe Weavers', '264-697-0883', 'kweavers1d@so-net.ne.jp', 373, 11800066, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (931, 'Ulick Sellwood', '301-929-5406', 'usellwood1e@people.com.cn', 325, 10308946, 1, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (62696, 'Faber Antonietti', '420-631-9010', 'fantonietti1f@eepurl.com', 658, 8353974, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (44000, 'Lamar Wrightham', '368-459-3702', 'lwrightham1g@cnn.com', 742, 17208770, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (30100, 'Steffie Grigoriscu', '642-650-5000', 'sgrigoriscu1h@networksolutions.com', 340, 17069332, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (78628, 'Sidonnie Kibbe', '519-610-6406', 'skibbe1i@instagram.com', 757, 14537941, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (51517, 'Izabel Valek', '921-679-2848', 'ivalek1j@npr.org', 795, 17443099, 0, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (31211, 'Rawley Armal', '530-873-0666', 'rarmal1k@1688.com', 459, 8722851, 0, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (94240, 'Peter Balcombe', '273-924-4480', 'pbalcombe1l@blogspot.com', 494, 9727349, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (55212, 'Darcie Zorzi', '991-220-6099', 'dzorzi1m@themeforest.net', 636, 2036585, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (16171, 'Normand Hof', '961-575-2136', 'nhof1n@marketwatch.com', 530, 4210048, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (89173, 'Orbadiah Warratt', '456-156-7457', 'owarratt1o@sohu.com', 792, 4603168, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (23420, 'Ali Millbank', '821-450-5370', 'amillbank1p@mtv.com', 429, 19645279, 0, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (88098, 'Katlin Alejandro', '187-751-2072', 'kalejandro1q@uol.com.br', 483, 19011164, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (73542, 'Missie Jedrasik', '644-519-0387', 'mjedrasik1r@reference.com', 546, 1474091, 1, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (85262, 'Valentijn Chavez', '168-264-9241', 'vchavez1s@reverbnation.com', 483, 2718056, 0, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (91185, 'Byrom Mc Meekan', '816-663-2612', 'bmc1t@smh.com.au', 341, 11543356, 0, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (37073, 'Codie Jenking', '374-298-6771', 'cjenking1u@adobe.com', 410, 11699387, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (76054, 'Janine Feenan', '420-616-8668', 'jfeenan1v@arizona.edu', 739, 10030341, 0, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (78650, 'Clive Rideout', '727-120-3499', 'crideout1w@mysql.com', 649, 7948563, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (45333, 'Paco Arnaudot', '813-342-3595', 'parnaudot1x@tinyurl.com', 415, 401622, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (15748, 'Gayleen Thunders', '775-646-1849', 'gthunders1y@engadget.com', 301, 15235306, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (29288, 'Whit Kenyam', '734-660-7479', 'wkenyam1z@sciencedirect.com', 684, 16330316, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (97318, 'Jacintha Moorcraft', '723-340-9952', 'jmoorcraft20@pen.io', 573, 5313223, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (14063, 'Dalston Falconar', '401-515-6094', 'dfalconar21@bbc.co.uk', 606, 15668445, 0, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (65489, 'Mead Binks', '541-787-3702', 'mbinks22@devhub.com', 568, 3887535, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (30657, 'Isaiah Stretton', '839-933-0240', 'istretton23@guardian.co.uk', 403, 9690637, 0, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (43767, 'Sam De Carteret', '131-911-9447', 'sde24@reddit.com', 434, 12608172, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (59385, 'Revkah Slyford', '190-701-6202', 'rslyford25@slideshare.net', 623, 19637988, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (40180, 'Fleurette Treherne', '257-758-7455', 'ftreherne26@google.ca', 584, 4630877, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (27060, 'Adair Pauluzzi', '636-531-6382', 'apauluzzi27@google.fr', 650, 9893246, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (35525, 'Kory Ackrill', '152-198-5920', 'kackrill28@hubpages.com', 481, 16691834, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (11422, 'Alfy Maddison', '385-346-5694', 'amaddison29@google.com.au', 342, 4388954, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (55236, 'Heloise Grigori', '879-642-8723', 'hgrigori2a@hostgator.com', 537, 15740877, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (23208, 'Abbot Bodill', '185-521-5980', 'abodill2b@ning.com', 604, 7488706, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (44595, 'Charmain Kapelhoff', '877-480-1412', 'ckapelhoff2c@forbes.com', 789, 1345115, 0, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (93092, 'Edy Dawnay', '460-743-5178', 'edawnay2d@bravesites.com', 556, 19687443, 0, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (61162, 'Tera Mullenger', '827-315-1472', 'tmullenger2e@dell.com', 413, 18824810, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (90273, 'Deena Islip', '534-146-3748', 'dislip2f@usnews.com', 343, 10325229, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (87176, 'Venus Habbershon', '381-402-1688', 'vhabbershon2g@who.int', 578, 8210406, 1, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (22446, 'Kerrin Stiebler', '703-326-0483', 'kstiebler2h@privacy.gov.au', 511, 16974653, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (33188, 'Malory Charlin', '786-136-0054', 'mcharlin2i@tripod.com', 596, 19357677, 0, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (25253, 'Austina Cruddace', '551-172-8113', 'acruddace2j@admin.ch', 700, 7455375, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (61299, 'Austina Butchard', '226-265-9436', 'abutchard2k@surveymonkey.com', 777, 167859, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (51879, 'Luella Offner', '419-971-4399', 'loffner2l@pagesperso-orange.fr', 661, 10556893, 1, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (61423, 'Cacilia Mereweather', '186-428-2091', 'cmereweather2m@eventbrite.com', 669, 15912894, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (52506, 'Clara Croysdale', '650-808-5696', 'ccroysdale2n@wordpress.com', 707, 3720609, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (2332, 'Lindon Ebbles', '196-750-5188', 'lebbles2o@mozilla.com', 704, 15689645, 1, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (13657, 'Nadya Shatford', '315-813-0827', 'nshatford2p@zdnet.com', 643, 6770159, 1, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (44306, 'Levin Hartridge', '991-467-1322', 'lhartridge2q@psu.edu', 395, 10845472, 0, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (542, 'Sharleen Orrice', '669-902-6491', 'sorrice2r@phoca.cz', 345, 8788552, 1, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (74823, 'Anthe Feehely', '869-455-5890', 'afeehely2s@hao123.com', 739, 9371007, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (82424, 'Gipsy Ribbon', '229-853-3462', 'gribbon2t@pcworld.com', 468, 17725770, 0, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (45353, 'Elsinore Tuting', '953-528-6416', 'etuting2u@weibo.com', 649, 388752, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (98031, 'Oates O''Cooney', '256-192-0134', 'oocooney2v@tinyurl.com', 329, 246525, 0, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (9421, 'Constancia Megson', '474-263-3527', 'cmegson2w@trellian.com', 576, 9078290, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (2248, 'Vin Jerrold', '768-602-5870', 'vjerrold2x@rakuten.co.jp', 739, 7784437, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (57615, 'Aylmer Whitwham', '611-650-8379', 'awhitwham2y@forbes.com', 671, 4157299, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (30001, 'Karla Jarvie', '509-648-4541', 'kjarvie2z@google.com.au', 601, 8655466, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (51829, 'Ardisj Wilde', '242-695-0887', 'awilde30@howstuffworks.com', 346, 415386, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (86315, 'Bambi Tranfield', '396-501-5149', 'btranfield31@hexun.com', 728, 14621982, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (14574, 'Moshe Farrans', '568-196-0834', 'mfarrans32@loc.gov', 365, 5093087, 1, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (95914, 'Tobye Lethbury', '839-216-3911', 'tlethbury33@boston.com', 789, 17510759, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (31178, 'Hans Maddison', '707-940-4482', 'hmaddison34@howstuffworks.com', 499, 16176249, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (39350, 'Gennie Troyes', '755-511-6399', 'gtroyes35@eepurl.com', 749, 16023390, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (77506, 'Chrissie Waudby', '613-412-3454', 'cwaudby36@hud.gov', 665, 7360989, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (34132, 'Yoshi Glynne', '297-281-9260', 'yglynne37@biblegateway.com', 589, 8885555, 1, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (70035, 'Tyne Krimmer', '824-752-0022', 'tkrimmer38@europa.eu', 323, 17076534, 0, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (67834, 'Wendel Divina', '282-734-3977', 'wdivina39@soup.io', 793, 5180156, 0, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (1008, 'Calla Holdron', '103-561-6758', 'choldron3a@jugem.jp', 705, 5195615, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (22337, 'Avictor Baynard', '256-371-7954', 'abaynard3b@bizjournals.com', 599, 8040908, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (28219, 'Codi Fronsek', '870-256-0523', 'cfronsek3c@biglobe.ne.jp', 374, 4511584, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (71120, 'Jackie O''Skehan', '340-455-9986', 'joskehan3d@utexas.edu', 639, 18603800, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (92198, 'Jeremy Laity', '445-976-6667', 'jlaity3e@google.es', 678, 2468453, 0, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (840, 'Bellina Weall', '777-838-2352', 'bweall3f@xing.com', 390, 19447706, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (85070, 'Lucilia Meale', '876-233-5256', 'lmeale3g@forbes.com', 436, 2792357, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (50183, 'Bax Coleridge', '812-107-8200', 'bcoleridge3h@wikia.com', 662, 15992668, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (15432, 'Jori Andreutti', '405-738-4237', 'jandreutti3i@zdnet.com', 743, 9917299, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (6139, 'Elnora Cratere', '688-889-0569', 'ecratere3j@google.com.br', 403, 11127548, 0, 1, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (95128, 'Pippy Creavan', '371-297-6081', 'pcreavan3k@soup.io', 500, 10853497, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (15122, 'Lynette Cayford', '530-149-5040', 'lcayford3l@qq.com', 754, 10047382, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (36059, 'Anthia Muzzini', '833-196-4432', 'amuzzini3m@virginia.edu', 552, 1603234, 1, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (98044, 'Claudell Gealy', '607-299-9210', 'cgealy3n@si.edu', 672, 1140501, 0, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (92541, 'Stephanie Narramor', '326-230-6760', 'snarramor3o@chron.com', 423, 11054610, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (10538, 'Oby Filippone', '515-719-3608', 'ofilippone3p@epa.gov', 746, 14652499, 1, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (70739, 'Bryan De Ortega', '100-235-9467', 'bde3q@nbcnews.com', 431, 10547192, 0, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (5866, 'Arabela Weatherley', '585-872-9444', 'aweatherley3r@printfriendly.com', 795, 7791601, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (49692, 'Roldan Maultby', '938-581-6791', 'rmaultby3s@newyorker.com', 370, 16263322, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (31762, 'Patrizio Purchall', '154-906-9402', 'ppurchall3t@tripod.com', 370, 9717090, 0, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (98675, 'Gaelan Hathaway', '225-176-9147', 'ghathaway3u@fda.gov', 307, 1275933, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (85949, 'Meryl Peegrem', '929-111-8443', 'mpeegrem3v@house.gov', 756, 4168253, 1, 0, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (94185, 'Ayn Crutchley', '528-883-0942', 'acrutchley3w@godaddy.com', 463, 5363117, 0, 1, 'short term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (94181, 'Shayna Ostridge', '996-496-3760', 'sostridge3x@g.co', 704, 8034220, 1, 1, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (37834, 'Esdras Accomb', '181-550-6547', 'eaccomb3y@sphinn.com', 773, 19750706, 1, 0, 'long term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (77915, 'Susana McCully', '890-640-1594', 'smccully3z@addthis.com', 303, 4877734, 0, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (32734, 'Misha Dallimare', '851-813-6512', 'mdallimare40@slashdot.org', 473, 11415638, 1, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (86140, 'Cullin Cathcart', '852-138-0272', 'ccathcart41@washingtonpost.com', 711, 9441909, 1, 0, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (7787, 'Broderic Adess', '132-502-4404', 'badess42@bizjournals.com', 566, 9429128, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (7529, 'Muffin Rother', '456-988-3615', 'mrother43@google.co.uk', 738, 18241812, 0, 0, 'short term', 0);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (85186, 'Regen Coling', '706-493-0786', 'rcoling44@statcounter.com', 589, 18020376, 1, 1, 'long term', 1);
+insert into Person (p_id, name, phone_num, email, credit_score, salary, visited, satisfied, lease_type, prospective_status) values (84802, 'Stanleigh Bartolomeo', '634-726-0484', 'sbartolomeo45@smugmug.com', 766, 875327, 0, 0, 'long term', 0);
+
+
+Select * from Person;
+
+Create table Lease(
+lease_id numeric(15) not null,
+date_signed date,
+lease_term varchar(100),
+apartment_number numeric(5) not null,
+property_id varchar(7) not null,
+primary key (lease_id),
+FOREIGN KEY (apartment_number, property_id) REFERENCES Apartment(apartment_number, property_id)
+);
+
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (94588, '28-Jan-2021', 'long term', 812, 6);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (15889, '23-Jun-2022', 'short term', 488, 14);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (7316, '29-Dec-2019', 'short term', 202, 21);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (53580, '04-Feb-2022', 'short term', 867, 13);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (38560, '01-Jul-2021', 'short term', 583, 4);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (25545, '01-Apr-2023', 'long term', 298, 10);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (23480, '02-Jun-2022', 'long term', 633, 30);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (48564, '28-Dec-2019', 'long term', 168, 18);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (19950, '13-Dec-2021', 'long term', 611, 6);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (82628, '01-Feb-2023', 'long term', 542, 24);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (54360, '03-Jul-2023', 'short term', 413, 5);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (4541, '30-Nov-2023', 'short term', 806, 1);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (17979, '08-May-2020', 'short term', 544, 26);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (15288, '14-Apr-2022', 'short term', 329, 27);
+insert into Lease (lease_id, date_signed, lease_term, apartment_number, property_id) values (74108, '23-Apr-2023', 'long term', 336, 28);
+
+
+
+
+Select * from Lease;
+
+Create table Payment(
+payment_id numeric(20) not null,
+amount numeric(20),
+type varchar(100),
+lease_id numeric(15),
+primary key (payment_id),
+foreign key (lease_id) references Lease(lease_id)
+);
+
+insert into Payment (payment_id, type, amount, lease_id) values (92020, 'security deposit', 24655, 48564);
+insert into Payment (payment_id, type, amount, lease_id) values (54251, 'security deposit', 6177, 82628);
+insert into Payment (payment_id, type, amount, lease_id) values (11771, 'late fee', 24403, 25545);
+insert into Payment (payment_id, type, amount, lease_id) values (68971, 'security deposit', 15278, 74108);
+insert into Payment (payment_id, type, amount, lease_id) values (2256, 'security deposit', 18887, 4541);
+insert into Payment (payment_id, type, amount, lease_id) values (86862, 'rent payment', 12767, 17979);
+insert into Payment (payment_id, type, amount, lease_id) values (58336, 'rent payment', 21970, 94588);
+insert into Payment (payment_id, type, amount, lease_id) values (55493, 'security deposit', 17393, 23480);
+insert into Payment (payment_id, type, amount, lease_id) values (43170, 'rent payment', 5642, 53580);
+insert into Payment (payment_id, type, amount, lease_id) values (10938, 'late fee', 19773, 48564);
+insert into Payment (payment_id, type, amount, lease_id) values (51493, 'security deposit', 16442, 19950);
+insert into Payment (payment_id, type, amount, lease_id) values (69259, 'rent payment', 11962, 53580);
+insert into Payment (payment_id, type, amount, lease_id) values (87582, 'late fee', 11285, 7316);
+insert into Payment (payment_id, type, amount, lease_id) values (21472, 'security deposit', 14244, 94588);
+insert into Payment (payment_id, type, amount, lease_id) values (96590, 'rent payment', 9244, 19950);
+insert into Payment (payment_id, type, amount, lease_id) values (66259, 'rent payment', 6287, 74108);
+insert into Payment (payment_id, type, amount, lease_id) values (11285, 'security deposit', 3124, 15889);
+insert into Payment (payment_id, type, amount, lease_id) values (25981, 'late fee', 16116, 38560);
+insert into Payment (payment_id, type, amount, lease_id) values (1027, 'late fee', 13720, 15889);
+insert into Payment (payment_id, type, amount, lease_id) values (2978, 'security deposit', 15505, 48564);
+insert into Payment (payment_id, type, amount, lease_id) values (57461, 'security deposit', 8354, 53580);
+insert into Payment (payment_id, type, amount, lease_id) values (2359, 'security deposit', 11033, 82628);
+insert into Payment (payment_id, type, amount, lease_id) values (40755, 'security deposit', 18260, 15288);
+insert into Payment (payment_id, type, amount, lease_id) values (53343, 'rent payment', 8896, 38560);
+insert into Payment (payment_id, type, amount, lease_id) values (91796, 'rent payment', 11890, 53580);
+insert into Payment (payment_id, type, amount, lease_id) values (70068, 'late fee', 223, 74108);
+insert into Payment (payment_id, type, amount, lease_id) values (54415, 'rent payment', 17450, 38560);
+insert into Payment (payment_id, type, amount, lease_id) values (27766, 'late fee', 21205, 19950);
+insert into Payment (payment_id, type, amount, lease_id) values (23591, 'rent payment', 7793, 19950);
+insert into Payment (payment_id, type, amount, lease_id) values (41678, 'rent payment', 24308, 38560);
+insert into Payment (payment_id, type, amount, lease_id) values (50107, 'rent payment', 12587, 94588);
+insert into Payment (payment_id, type, amount, lease_id) values (24436, 'security deposit', 9786, 4541);
+insert into Payment (payment_id, type, amount, lease_id) values (73242, 'late fee', 10567, 74108);
+insert into Payment (payment_id, type, amount, lease_id) values (33619, 'security deposit', 12068, 7316);
+insert into Payment (payment_id, type, amount, lease_id) values (77456, 'security deposit', 21717, 15889);
+insert into Payment (payment_id, type, amount, lease_id) values (36533, 'late fee', 23310, 19950);
+insert into Payment (payment_id, type, amount, lease_id) values (55195, 'security deposit', 12073, 25545);
+insert into Payment (payment_id, type, amount, lease_id) values (41555, 'rent payment', 973, 7316);
+insert into Payment (payment_id, type, amount, lease_id) values (98664, 'rent payment', 7156, 82628);
+insert into Payment (payment_id, type, amount, lease_id) values (45809, 'security deposit', 494, 82628);
+insert into Payment (payment_id, type, amount, lease_id) values (78334, 'late fee', 4788, 7316);
+insert into Payment (payment_id, type, amount, lease_id) values (16968, 'security deposit', 2858, 38560);
+insert into Payment (payment_id, type, amount, lease_id) values (74376, 'security deposit', 24441, 74108);
+insert into Payment (payment_id, type, amount, lease_id) values (53792, 'rent payment', 4855, 4541);
+insert into Payment (payment_id, type, amount, lease_id) values (39142, 'security deposit', 3334, 23480);
+insert into Payment (payment_id, type, amount, lease_id) values (85579, 'rent payment', 16300, 4541);
+insert into Payment (payment_id, type, amount, lease_id) values (58000, 'late fee', 14560, 38560);
+insert into Payment (payment_id, type, amount, lease_id) values (61328, 'late fee', 21951, 53580);
+insert into Payment (payment_id, type, amount, lease_id) values (8510, 'late fee', 10497, 48564);
+insert into Payment (payment_id, type, amount, lease_id) values (9740, 'rent payment', 24055, 7316);
+insert into Payment (payment_id, type, amount, lease_id) values (27186, 'late fee', 7907, 54360);
+insert into Payment (payment_id, type, amount, lease_id) values (87341, 'security deposit', 9699, 15288);
+insert into Payment (payment_id, type, amount, lease_id) values (39496, 'rent payment', 4260, 25545);
+insert into Payment (payment_id, type, amount, lease_id) values (59974, 'rent payment', 4216, 38560);
+insert into Payment (payment_id, type, amount, lease_id) values (91726, 'rent payment', 16941, 19950);
+insert into Payment (payment_id, type, amount, lease_id) values (5587, 'late fee', 24487, 15889);
+insert into Payment (payment_id, type, amount, lease_id) values (54365, 'rent payment', 14572, 74108);
+insert into Payment (payment_id, type, amount, lease_id) values (76654, 'rent payment', 8879, 23480);
+insert into Payment (payment_id, type, amount, lease_id) values (63757, 'security deposit', 21251, 74108);
+insert into Payment (payment_id, type, amount, lease_id) values (21799, 'late fee', 14672, 38560);
+insert into Payment (payment_id, type, amount, lease_id) values (88808, 'security deposit', 13501, 48564);
+insert into Payment (payment_id, type, amount, lease_id) values (29102, 'late fee', 2071, 7316);
+insert into Payment (payment_id, type, amount, lease_id) values (32905, 'security deposit', 7727, 15288);
+insert into Payment (payment_id, type, amount, lease_id) values (7714, 'rent payment', 2009, 82628);
+insert into Payment (payment_id, type, amount, lease_id) values (71088, 'rent payment', 8527, 53580);
+insert into Payment (payment_id, type, amount, lease_id) values (40116, 'rent payment', 8488, 15889);
+insert into Payment (payment_id, type, amount, lease_id) values (40075, 'late fee', 22276, 25545);
+insert into Payment (payment_id, type, amount, lease_id) values (60127, 'security deposit', 24744, 15889);
+insert into Payment (payment_id, type, amount, lease_id) values (97491, 'late fee', 18043, 7316);
+insert into Payment (payment_id, type, amount, lease_id) values (92406, 'rent payment', 17473, 48564);
+insert into Payment (payment_id, type, amount, lease_id) values (85930, 'security deposit', 6273, 82628);
+insert into Payment (payment_id, type, amount, lease_id) values (58445, 'security deposit', 446, 23480);
+insert into Payment (payment_id, type, amount, lease_id) values (51774, 'late fee', 3894, 7316);
+insert into Payment (payment_id, type, amount, lease_id) values (84959, 'rent payment', 567, 94588);
+insert into Payment (payment_id, type, amount, lease_id) values (1708, 'late fee', 16245, 53580);
+
+
+Select * from Payment;
+
+
+Create table Tenant(
+t_id numeric(15) not null,
+moveout date,
+roommates numeric(2),
+pets numeric(2),
+lease_id numeric(15),
+name_on_card varchar(255),
+account_num numeric(20),
+Foreign key (t_id) references Person(p_id),
+primary key (t_id),
+foreign key (lease_id) references Lease(lease_id)
+);
+
+
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (6139, '29-Sep-2023', 3, 9, 23480, 'Idaline Agnew', '7663642910');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (52503, '23-Jul-2023', 7, 0, 19950, 'Korey Karpenko', '3643962444');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (51517, '23-May-2023', 7, 3, 17979, 'Frank Foxen', '5482322424');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (78628, '05-Jan-2023', 3, 8, 4541, 'Dosi Brindle', '8644691430');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (78650, '16-Oct-2023', 8, 6, 38560, 'Kerianne Condie', '7401393379');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (77915, '23-Aug-2024', 10, 2, 82628, 'Arther Collinge', '0850961254');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (13759, '03-Feb-2023', 0, 4, 7316, 'Fredric Hart', '4983864490');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (85070, '14-Jun-2023', 3, 9, 23480, 'Tabb Mattiacci', '1984095978');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (31211, '08-Mar-2023', 4, 5, 23480, 'Celestia Northcott', '7436331574');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (36235, '06-Sep-2024', 4, 2, 53580, 'Emylee Ciciotti', '2765008558');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (51425, '02-Aug-2024', 5, 9, 23480, 'Cara Bagwell', '3489021037');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (65255, '25-Aug-2024', 8, 8, 17979, 'Laverne Agus', '4600090403');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (45353, '24-Oct-2023', 6, 1, 25545, 'Floria Bott', '9460634478');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (73542, '12-Aug-2024', 6, 0, 53580, 'Conni Pannaman', '3196743543');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (23420, '14-Sep-2023', 1, 3, 19950, 'Odey Mogenot', '8554761839');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (55212, '14-Aug-2024', 10, 2, 94588, 'Lillis Katt', '3190453748');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (74823, '31-Dec-2022', 6, 8, 38560, 'Dasya Dunckley', '7765032836');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (90273, '25-Jul-2024', 8, 7, 15889, 'Ninetta Littlechild', '6928544015');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (70739, '01-Jun-2023', 0, 6, 4541, 'Kellia Peacey', '0317200216');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (75884, '19-Sep-2024', 4, 10, 74108, 'Fletch Sjostrom', '9853514451');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (4076, '26-Aug-2023', 8, 5, 7316, 'Susann Ruggiero', '4074611287');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (32734, '03-Sep-2024', 5, 10, 23480, 'Maye Karpmann', '4487894123');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (31762, '02-Sep-2023', 1, 0, 38560, 'Heriberto Girtin', '9975644996');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (98675, '10-Jan-2024', 8, 8, 53580, 'Dacie Dauby', '8906371292');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (65489, '20-Jan-2024', 3, 1, 25545, 'Byron Keyes', '0883652765');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (61162, '11-Feb-2024', 9, 2, 17979, 'Norbert Iashvili', '1345064233');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (22446, '25-Sep-2023', 3, 10, 19950, 'Cristen Gitthouse', '9080399299');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (91185, '10-Aug-2023', 9, 1, 4541, 'Glenn Arnault', '8393462304');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (39350, '30-Sep-2024', 10, 6, 4541, 'Herold Sibbald', '8293792329');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (23208, '22-May-2024', 10, 7, 23480, 'Gratia Pyne', '4464387470');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (87176, '16-Aug-2023', 1, 10, 23480, 'Caprice Soonhouse', '8438669719');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (63980, '27-Sep-2023', 6, 9, 17979, 'Jessi Choke', '6072178286');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (30100, '31-Dec-2023', 9, 0, 94588, 'Floria Sharrier', '3252482827');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (14574, '05-Oct-2023', 4, 0, 7316, 'Jeralee Costellow', '0107445018');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (80888, '17-Sep-2023', 2, 7, 38560, 'Esther McGreay', '0902216686');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (43404, '08-Dec-2022', 6, 8, 54360, 'Khalil Sarah', '0895243091');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (97347, '14-Sep-2024', 8, 2, 17979, 'Iolanthe Barnewall', '4967617611');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (43136, '22-Aug-2023', 1, 8, 25545, 'Fred Beament', '8901620790');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (88098, '29-Mar-2024', 4, 10, 94588, 'Darci Scholl', '4003066162');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (1589, '14-Dec-2022', 3, 5, 15889, 'Elizabeth Knapton', '4822401340');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (31178, '16-May-2023', 0, 10, 25545, 'Charlie Nuschke', '4052151003');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (2332, '24-Mar-2024', 1, 5, 23480, 'Tiffie Bettleson', '3964475017');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (11422, '26-Jun-2023', 5, 8, 15889, 'Wandie Bacon', '3682773509');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (40382, '04-Feb-2023', 1, 0, 74108, 'Burke Watkiss', '9387876969');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (931, '21-Dec-2022', 8, 0, 38560, 'Roddy Kempstone', '1331390869');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (61423, '24-Oct-2023', 8, 7, 23480, 'Dorolisa Osgar', '3410205128');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (840, '02-Jul-2024', 9, 8, 54360, 'Osmond Kleinplatz', '3960324421');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (67834, '18-Sep-2024', 10, 6, 4541, 'Ernestine Rentz', '7724706654');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (79078, '25-Sep-2023', 2, 5, 15889, 'Gorden McLice', '8487174361');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (1008, '28-Jun-2024', 7, 0, 17979, 'Willamina Ottam', '6015258144');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (2560, '16-Apr-2024', 5, 3, 15889, 'Boonie Diamond', '6212380244');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (98284, '15-Feb-2024', 9, 5, 15288, 'Aeriel Luckham', '1388027968');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (9847, '15-Aug-2023', 1, 9, 94588, 'Kasper Lodder', '8568390641');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (27060, '18-Jan-2023', 3, 1, 4541, 'Alair Sephton', '5813815317');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (22337, '26-Jul-2024', 4, 5, 7316, 'Carol-jean Goodbourn', '1268712531');
+insert into Tenant (t_id, moveout, pets, roommates, lease_id, name_on_card, account_num) values (10538, '27-Nov-2023', 3, 6, 23480, 'Ruttger Pischel', '9403207736');
+
+select * from tenant;
+

@@ -1,0 +1,21 @@
+Papa Kofi Asibuo, CSE 241 Final Project
+I used a makefile, kindly run "make" in the root directory to compile and run the project.
+
+Data generation sources:
+Mockaroo.com was used in the data generation process.
+
+Rules:
+A single tenant is in charge of a lease. They can add roommates on to a lease but they are responsible for paying the total amount of rent for the apartment based on their bank account and card on file
+A payment type can be a late fee, security deposit, or monthly rent.
+
+Tenant tips:
+To see an example of someone who's late on rent, try these tenant IDs: T_ID = 51425, 73542
+To see an example of someone who's ahead of rent, try these tenant IDs: T_ID = 23420, 30100
+To see an example of someone who owes 0 rent payments, try these tenant IDs: T_ID = 6139, 80888
+
+To update a phone number try this tenant ID (it currently has my phone number lol) [425-515-6866]: T_ID = 51425
+
+Company Manager tips:
+Property IDs with data: 1-30 (use any property_id from 1 - 30)
+
+
